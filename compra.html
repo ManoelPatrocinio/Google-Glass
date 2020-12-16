@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html  lang="pt-br">
+<head>
+    <meta charset="utf-8"/> 
+    <title>Tudo sobre o Google Glas </title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+</head>
+
+ <!--javaScrip para efeito de trasição dos icones do menu -->   
+<script language="javascript" src="_javascript/funcoes.js"></script>
+
+<body>
+<div id="interface">    
+
+    <header id="cabecalho">
+        <hgroup>
+            <h1> Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
+
+            <img id="icone" src="_imagens/contato.png"/>
+
+        <nav id="Menu">
+            <h1>Menu Principal</h1>
+            <ul>
+                <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="index.html"> Home </a> </li>
+                <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="specs.html"> Especificações </a> </li>
+                <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="fotos.html"> Fotos</a></li>
+                <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="multimidia.html"> Multimídia</a></li>
+                <li onmouseover="mudaFoto('_imagens/galeria-031.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="compra.html"> Comprar </a></li>
+                <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"> <a href="fale-conosco.html"> Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section id="corpo-full">
+
+    <article id="noticia-principal">    
+    
+        <header id="cabecalho-artigo">  
+
+	        <hgroup>
+	        <h3> Fale Conosco > Quero um Google Glass </h3>
+	        <h1> Formulario de Compra</h1>
+	        </hgroup>
+        
+    	</header>
+
+            <form id="formPhp" method="POST" action="salvarCompra.php" oninput="calc_total();">
+              <fieldset id="comprovante">
+
+                <h3 class="form">DADOS DO USUÁRIO</h3>
+
+                    <p> Nome:  <input type="text" name="Nome" id="cNome" size="30" maxlength="40" placeholder="Nome Completo" /> </p>
+                    <p> E-mail: <input type="email" name="Email" id="cmail" size="26" maxlength="40"/>                             </p>
+                    <p><label for="cSenha"> Senha:</label> <input type="password" name="Senha" id="cSenha" size="8" maxlength="8" placeholder="8 digitos" /></p>
+                    
+                    </br> <h3 class="form">ENDEREÇO DE ENTREGA </h3>
+
+                    <p> Estado: <select name="Estados" id="cEstado"> 
+                           <optgroup label="Região Nordeste"> 
+
+                                <option> Bahia </option>
+                                <option> Pernanbuco </option>
+                                <option> Alagoas  </option>
+
+                            </optgroup>
+                            <optgroup label="Região Sudeste">
+                                <option value="São Paulo"> São Paulo</option>
+                                <option value="Rio De Janeiro">Rio De Janeiro</option>
+                                <option value="Minas Gerais">Minas Gerais</option>
+                            </optgroup>
+                            
+                        </select>
+			 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                    <label for="cCidade">Cidade:</label> <input type="text" name="Cidade" id="cCidade" size="20" maxlength="30" placeholder="Sua Cidade"list="cidades" >
+                    <datalist id="cidades">
+                        <option>Barra</option>
+                        <option>Irecê</option>
+                        <option>Campinas</option>
+                        <option>Osasco</option>
+                        <option>Santos</option>
+                    </datalist>
+		   </p>	
+		   <p>
+		   <label for="cLogadouro"> Logradouro:</label> <select name="logadouro" id="cLogadouro"> 
+                                                        <option> Rua </option>
+                                                        <option> AV. </option>
+                                                        <option> Travessa </option>
+                                                        <option> Loteamento </option>
+                                                        </select>
+       		 &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                    <label for="cNumero"> Número:</label> <input type="number" name="Numero" id="cNumero" min="0" max="99999">
+                    </p>
+
+                    </br>
+                   
+                <h3>Detalhes do Glass</h3>
+                    
+                <p> <label for="cCor"> Cor:</label>
+                    <select id="cCor" name="Cor">
+                        <option>Azul</option>
+                        <option>Branco</option>
+                        <option>Cinza</option>
+                        <option>Dourado</option>
+                        <option>Preto</option>
+                        <option>Prata</option>
+                        <option>Rosa</option>
+                    </select>
+                
+                 <label for="cCor">  Quantidade:</label>
+                    <input type="number" name="Qtd" id="cQtd" min="0" max="10" value="0" />
+               
+                
+                <label for="cPreco">Preço Total: R$</label>
+                    <input type="text" name="Preco" id="cPreco" placeholder="Total a Pagar" readonly/>
+                </p>
+                    <input type="submit" name="confirmar" id="Bconfirmar" value="Confirmar">
+
+                </fieldset> 
+            </form>   
+
+        <br><a href="fale-conosco.html"> VOLTAR </a>
+
+</section>
+
+ <footer id="rodape">
+    <p>Copyright 2013 - by Gustavo Guanabara  & Manoel Patrocinio<br>
+    <a href=" http://Facebook.com/cursoemvideo" target="_blank"> Facebook </a>| 
+    <a href=" http://twitter.com/cursoemvideo" target="_blank"> Twitter </a> </p>
+ </footer>
+</div>
+</body>
+</html>

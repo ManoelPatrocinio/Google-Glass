@@ -1,0 +1,269 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@font-face{  /* adiciona uma fonte externa */
+	font-family: 'FonteLogo';
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body{
+	font-family: Arial, sans-serif;
+	background-color: #dddddd;
+	color: rgba(0,0,0,1);
+}
+
+table#tabelaSpec{ /* definindo os bordas e margens da tabela*/
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#tabelaSpec td{ /* estilo das celulas*/
+	border: 1px solid #606060;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+table#tabelaSpec td.ce{ /* estilo das celulas a esquerda*/
+	color: #ffffff;
+	background-color: #606060;
+	vertical-align: top;	
+	font-weight: bold;
+}
+
+table#tabelaSpec td.cd{ /* estilo das celulas a direita*/
+	background-color: #cecece;
+	text-align: left;
+	
+}
+
+table#tabelaSpec caption{ /* titulo da tabela*/
+	color: #888888;
+	font-size:  13px;
+	font-weight: bolder;
+}
+table#tabelaSpec caption span{
+	display: block;
+	float: right;
+	color: #888888;
+
+	font-size: 8pt;
+	margin-top: 10px;
+}
+
+div#interface{
+	width: 1200px;
+	background-color: #ffffff;
+	margin: -20px auto 0px auto; /* cima, direita,baixo,esquerda*/ 
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5); /*sombreamento*/
+	padding: 10px 10px 10px 10px;/*espaço nas bosdas*/
+}
+
+p{
+	text-align: justify;
+	text-indent: 50px;
+}
+
+a{	/* cor cinza e sem linhas sunblinhadas*/
+	color: #606060;
+	text-decoration: none;
+}
+a:hover{ /* soblinha os links ao ponteiro do mouse*/
+	text-decoration: underline;
+}	
+
+header#cabecalho img#icone{
+	position: absolute;
+	left: 990px;
+	top: 70px;
+}
+
+header#cabecalho {
+	border-bottom: 1px #606060 solid; /* linha no fim do cabeçalho, largura,cor, formato*/
+	height: 150px;
+	background: url(../_imagens/glass-logo-peq.jpg) no-repeat 0px 100px;
+}
+
+
+header#cabecalho h1 {
+	font-family: FonteLogo, sans-serif;
+	font-size: 30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+
+header#cabecalho h2 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 30pt;
+	color: #888888;
+	padding: 0px;	
+	margin-top: 0px;
+}
+
+/*Formatação de imagens com legendas*/
+
+figure.foto-legenda{
+	position: relative;
+	border: 8px solid white;
+	box-shadow: 1px 1px 4px black; /*delocamento: horizontal, vertical, espalhamneto,cor;*/
+}
+
+figure.foto-legenda img{  /*configurando bordas*/
+	width: 100%;
+	height: 100%
+}
+
+figure.foto-legenda figcaption{
+	opacity: 0;
+	position:absolute; 
+	top: 0px;
+	background-color: rgba(0,0,0,.4);
+	color: white;
+	width: 100%;
+	height: 100%;
+	padding:10px;
+	box-sizing: border-box;
+	transition: opacity 1s;
+}
+figure.foto-legenda figcaption p{
+	font-family: Chandas;
+	font-weight: 5px;
+	font-size: 15px;
+}
+
+figure.foto-legenda:hover figcaption{ /*exibe a legenda com o ponteiro do mouse*/
+	opacity: 1;
+}
+
+/* formatação do menu */
+
+nav#menu {  /*flutuação*/
+	display: block;
+}
+nav#Menu ul {
+	list-style: none; /* retira as bolinas da lista*/
+	text-transform:  uppercase; /*transforma em maiscula*/
+	position: absolute;	/*para ficar livre no site*/
+	top: -10px;
+	left: 40%;
+}
+
+nav#Menu li{
+
+	display: inline-block; /* posição horizontal */
+	background-color: #dddddd;
+	padding: 8px;/*espaço dentro dos itens*/
+	margin: 2px;	/*espaço entre os itens*/
+
+	/* usar o site prefixr para codigos css compativeis a nevegadores antigos*/
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-o-transition: background-color 1s;
+	-ms-transition: background-color 1s;
+	transition: background-color 1s;
+}
+	
+nav#Menu li:hover{	/* feito ao passar o mouse pelos icones de menu*/
+	background-color: #606060;
+}
+
+nav#Menu h1{	/*desativa a exibição de "Menu principal"*/
+	display: none;
+}
+
+nav#Menu a{ /*altera visual do Menu(link)*/
+	color: #000000;
+	text-decoration: none; /* tira as linhas*/
+}
+
+nav#Menu a:hover{ /*efeito de mudar a font ao mouse*/
+	color: #ffffff;
+	text-decoration: underline; /* inseri  as linhas*/
+}
+
+/*formatando divisão da pagina*/
+
+section#corpo{  /*sessão principal do conteúdo*/
+	display: block; /*exibir como um bloco*/
+	width: 530px;
+	float: left;/* faz o bloco flutar na posição*/
+	border-right:  1px solid #606060; /*largura, tipo*, cor*/
+	padding: 15px; /* para um distaciamento do borda*/
+}
+
+ article#noticia-principal h2{ /*para exibição de uma noticia*/
+ 	font-size: 13pt;
+ 	color: #606060;
+ 	background-color: #dddddd;
+ 	padding: 5px 0px 5px 10px;	
+ 	margin: 10px 0px 10px 0px;
+ }
+
+ header#cabecalho-artigo h1{
+ 	font-family: 'FonteLogo',sans-serif;
+ 	font-size: 20pt;
+ 	color: #606060;
+ 	margin-bottom: 0px;
+ 	margin-top: 0px;
+ }
+ 
+ header#cabecalho-artigo h2{
+ 	font-size: 13pt;
+ 	color: #cecece;
+ 	background-color: #ffffff;
+ 	margin: 0px;
+ }
+
+ header#cabecalho-artigo h3{
+ 	font-size: 12pt;
+ 	color: #606060;
+ }
+h3.direita{
+	text-align: right;
+}
+aside#lateral{ /*sessão secundaria*/
+	display: block;
+	width: 400px;
+	float: right; /* faz o bloco flutar na posição*/
+	background-color: #dddddd;
+	padding: 15px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1{
+	margin-top: 5px;
+	font-family: 'FonteLogo',sans-serif;
+	font-size: 20pt;
+	color: #606060;
+}
+
+aside#lateral h2{
+	background-color: #606060;
+	font-size: 13pt;
+	color: #ffffff;
+	padding: 5px;
+}
+
+footer#rodape{
+	clear: both; /* limpa a flutuação a cima*/
+	border-top:  1px solid #606060; /*largura, tipo*, cor*/
+}
+
+footer#rodape p{
+	text-align: center;
+	
+}
+footer#rodape a{
+	color: blue;
+	text-decoration: none; /* tira as linhas*/
+
+}
+footer#rodape a:hover{
+	color: ##ffffff;
+	text-decoration: underline;
+}
