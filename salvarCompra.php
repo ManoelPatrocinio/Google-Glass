@@ -1,8 +1,9 @@
 <?php
 
+
             include_once 'conection.php';
             
-            /* identificação do usuário*/
+            /* identificação do usuário (não oficial)*/
               
       $nome  = filter_input(INPUT_POST, 'Nome', FILTER_SANITIZE_STRING);
       $senha = filter_input(INPUT_POST, 'Senha', FILTER_SANITIZE_STRING);
